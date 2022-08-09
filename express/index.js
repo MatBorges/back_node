@@ -15,6 +15,10 @@ app.get('/main', function(req, res){
     res.send('Page Main')
 })
 
+app.get('/name/:name/:lastName', function(req, res) {
+    res.send(`Olá ${req.params.name} ${req.params.lastName}`)    
+})
+
 app.listen(port, function(){
     console.log(`RUN IN http://localhost:${port}`)
 }) //Cria o servidor HTTP, DEVE SEMPRE SER A ÚLTIMA FUNÇÃO!!!!
